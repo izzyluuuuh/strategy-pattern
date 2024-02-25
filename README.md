@@ -10,13 +10,13 @@ The **Strategy pattern** allows developers to define a family of algorithms, put
 3. Create a class named **Online** that implements the interface you created earlier. In this class, declare two (2) private String variables named **email** and **password**.
 4. Add two (2) String parameters to the constructor of this class. Follow the names of your variables earlier.
 5. Insert the following statements into your constructor.
-```
+```java
 this.email = email;
 
 this.password = password;
 ```
 6. Use the **pay** method from the interface. Copy the code below.
-```
+```java
 public void pay (double amount) {
 
   System.out.println("Paid using online account: " + amount)
@@ -28,7 +28,7 @@ public void pay (double amount) {
 11. Add a class named **Cart**. Declare a private **double** variable named **amount**.
 12. Add a **double** parameter to its constructor. Then, write a **this** statement similar to the sample in Step 6.
 13. Add a **pay** method. Copy the code below for its content.
-```
+```java
 public void pay(Payment mode) {
 
   mode.pay(amount);
@@ -36,7 +36,7 @@ public void pay(Payment mode) {
 }
 ```
 14. Use the public class named **TestStrategy** to execute your Strategy pattern implementation. In its main method, instantiate a **Cart** object named **cart**. Copy the code below.
-```
+```java
 Cart cart = new Cart(1512.75);
 
 cart.pay(new Online("mark.reyes@gmail.com", "Wasd8456!")); 
@@ -46,7 +46,7 @@ cart = new Cart(375.25);
 15. Add a statement that uses the mobile payment mode. Refer to the second statement in the sample above.
 
 **Sample Output:**
-```
+```java
 Paid using online account: 1512.75
 
 Paid using mobile wallet: 375.25 
